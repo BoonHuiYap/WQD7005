@@ -1,0 +1,42 @@
+CREATE TABLE whatsapp (id INT, datetime STRING,sender STRING,keyword STRING,message STRING) row format delimited fields terminated by ",";
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/whatsapp.csv' OVERWRITE INTO TABLE whatsapp;
+CREATE TABLE edgenews (news STRING);
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/edgenews_row_wise.csv' OVERWRITE INTO TABLE edgenews;
+CREATE TABLE thestar_financial_results (id INT, board STRING,name STRING,code STRING,price_high FLOAT, price_low FLOAT, price_last FLOAT, change FLOAT, perc_change FLOAT, vol STRING, buy_vol STRING, sell_vol STRING, date_announced STRING, financial_year_end STRING, qtr STRING, period_end STRING, revenue STRING, pl STRING, eps STRING) row format delimited fields terminated by ";";
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/stock-financial-results.txt' OVERWRITE INTO TABLE thestar_financial_results;
+CREATE TABLE stock_20190303 (stock_code STRING,stock_name STRING,stock_ref FLOAT,stock_open FLOAT,stock_last FLOAT,stock_change STRING, stock_change_perc STRING,stock_volume INT) row format delimited fields terminated by '|';
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/daily_stock_price/stock_20190303.txt' OVERWRITE INTO TABLE stock_20190303;
+CREATE TABLE stock_20190304 (stock_code STRING,stock_name STRING,stock_ref FLOAT,stock_open FLOAT,stock_last FLOAT,stock_change STRING, stock_change_perc STRING,stock_volume INT) row format delimited fields terminated by '|';
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/daily_stock_price/stock_20190304.txt' OVERWRITE INTO TABLE stock_20190304;
+CREATE TABLE stock_20190305 (stock_code STRING,stock_name STRING,stock_ref FLOAT,stock_open FLOAT,stock_last FLOAT,stock_change STRING, stock_change_perc STRING,stock_volume INT) row format delimited fields terminated by '|';
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/daily_stock_price/stock_20190305.txt' OVERWRITE INTO TABLE stock_20190305;
+CREATE TABLE stock_20190306 (stock_code STRING,stock_name STRING,stock_ref FLOAT,stock_open FLOAT,stock_last FLOAT,stock_change STRING, stock_change_perc STRING,stock_volume INT) row format delimited fields terminated by '|';
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/daily_stock_price/stock_20190306.txt' OVERWRITE INTO TABLE stock_20190306;
+CREATE TABLE stock_20190307 (stock_code STRING,stock_name STRING,stock_ref FLOAT,stock_open FLOAT,stock_last FLOAT,stock_change STRING, stock_change_perc STRING,stock_volume INT) row format delimited fields terminated by '|';
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/daily_stock_price/stock_20190307.txt' OVERWRITE INTO TABLE stock_20190307;
+CREATE TABLE stock_20190308 (stock_code STRING,stock_name STRING,stock_ref FLOAT,stock_open FLOAT,stock_last FLOAT,stock_change STRING, stock_change_perc STRING,stock_volume INT) row format delimited fields terminated by '|';
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/daily_stock_price/stock_20190308.txt' OVERWRITE INTO TABLE stock_20190308;
+CREATE TABLE stock_20190311 (stock_code STRING,stock_name STRING,stock_ref FLOAT,stock_open FLOAT,stock_last FLOAT,stock_change STRING, stock_change_perc STRING,stock_volume INT) row format delimited fields terminated by '|';
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/daily_stock_price/stock_20190311.txt' OVERWRITE INTO TABLE stock_20190311;
+CREATE TABLE stock_20190312 (stock_code STRING,stock_name STRING,stock_ref FLOAT,stock_open FLOAT,stock_last FLOAT,stock_change STRING, stock_change_perc STRING,stock_volume INT) row format delimited fields terminated by '|';
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/daily_stock_price/stock_20190312.txt' OVERWRITE INTO TABLE stock_20190312;
+CREATE TABLE stock_20190313 (stock_code STRING,stock_name STRING,stock_ref FLOAT,stock_open FLOAT,stock_last FLOAT,stock_change STRING, stock_change_perc STRING,stock_volume INT) row format delimited fields terminated by '|';
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/daily_stock_price/stock_20190313.txt' OVERWRITE INTO TABLE stock_20190313;
+CREATE TABLE stock_20190314 (stock_code STRING,stock_name STRING,stock_ref FLOAT,stock_open FLOAT,stock_last FLOAT,stock_change STRING, stock_change_perc STRING,stock_volume INT) row format delimited fields terminated by '|';
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/daily_stock_price/stock_20190314.txt' OVERWRITE INTO TABLE stock_20190314;
+CREATE TABLE stock_20190315 (stock_code STRING,stock_name STRING,stock_ref FLOAT,stock_open FLOAT,stock_last FLOAT,stock_change STRING, stock_change_perc STRING,stock_volume INT) row format delimited fields terminated by '|';
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/daily_stock_price/stock_20190315.txt' OVERWRITE INTO TABLE stock_20190315;
+CREATE TABLE stock_20190318 (stock_code STRING,stock_name STRING,stock_ref FLOAT,stock_open FLOAT,stock_last FLOAT,stock_change STRING, stock_change_perc STRING,stock_volume INT) row format delimited fields terminated by '|';
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/daily_stock_price/stock_20190318.txt' OVERWRITE INTO TABLE stock_20190318;
+CREATE TABLE stock_20190319 (stock_code STRING,stock_name STRING,stock_ref FLOAT,stock_open FLOAT,stock_last FLOAT,stock_change STRING, stock_change_perc STRING,stock_volume INT) row format delimited fields terminated by '|';
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/daily_stock_price/stock_20190319.txt' OVERWRITE INTO TABLE stock_20190319;
+CREATE TABLE index (symbol STRING,trade_time STRING,p_close STRING,open STRING,volume STRING) row format delimited fields terminated by ',';
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/index.csv' OVERWRITE INTO TABLE index;
+CREATE TABLE currency (currency STRING);
+LOAD DATA LOCAL INPATH '/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/currency.txt' OVERWRITE INTO TABLE currency;
+
+
+#for i in $(ls /home/waishin/Desktop/WQD7005-data-mining/milestone2/files/daily_stock_price/* | cut -d '/' -f 9 | cut -d '.' -f 1);  do echo CREATE TABLE ${i} #"(stock_code STRING,stock_name STRING,stock_ref FLOAT,stock_open FLOAT,stock_last FLOAT,stock_change STRING, stock_change_perc STRING,stock_volume INT)" row format #delimited fields terminated by "'|';"; echo LOAD DATA LOCAL INPATH "'"/home/waishin/Desktop/WQD7005-data-mining/milestone2/files/daily_stock_price/${i}.txt"'" #OVERWRITE INTO TABLE ${i}";";done 
+#hive -f /home/waishin/hive_command
+
+
